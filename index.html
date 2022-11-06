@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/56b01e39c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/portfolio.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Accomplishment</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Web Developer</p>
+                <h1>Hi There,<br> I'm <span>Aditya</span> Shekhar</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/bit.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi Everyone, I am Aditya Shekhar.<br>
+                        I am a 2nd year B.Tech student of Computer Science at SRM IST, Chennai. I'm an aspiring Web developer.<br>
+                        I am looking forward to gain competency and exposure in Web development, Machine Learning, Testing and Digital Marketing.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <i class="fa-solid fa-code"></i>
+                                <li><span>Language Known</span><br>C, C++, Python</li><br>
+                                <i class="fa-brands fa-html5"></i>
+                                <li><span>HTML</span><br>Proficient in Html</li><br>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <li><span>CSS</span><br>Competent in CSS</li><br>
+                                <i class="fa-brands fa-square-js"></i>
+                                <li><span>Java Script</span><br>Advanced Beginner in Java Script</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021-2025</span><br>Pursuing B. Tech Degree in Computer Science Engineering From SRMIST Chennai</li><br>
+                                <li><span>2020-2021</span><br>Completed 12th from DPS and secured 91%</li><br>
+                                <li><span>2018-2019</span><br>Completed 10th from DPS and secured 96.8%</li><br>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Accomplishment</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Git Hub</h2>
+                    <p>2 projects</p>
+                    <a href="https://github.com/AdityaS28">Learn more</a>
+                </div>
+                <div>
+                    <h2>Code Chef</h2>
+                    <a href="https://www.codechef.com/users/srmkth_45">Learn more</a>
+                </div>
+                <div>
+                    <h2>HackerRank</h2>
+                    <a href="https://www.hackerrank.com/as4552">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">My Project</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/port2.jpg">
+                    <div class="layer">
+                        <h3>Tic Tac Toe</h3>
+                        <p>The game which we all know from our childhood.</p>
+                        <a href="https://github.com/AdityaS28/Mandatory-Tic-tac-toe"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/port3.jpg">
+                    <div class="layer">
+                        <h3>Ceaser Cipher</h3>
+                        <p>A code which enables us to input string length, 
+                            the code to be encrypted and gives the encrypted code as the output.</p>
+                        <a href="https://github.com/AdityaS28/PPS-Mini-Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>adityashekhar1720@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+918735048621</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/iamaditya0228/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/AdityaS28"><i class="fa-brands fa-github"></i></i></a>
+                        <a href="https://www.linkedin.com/in/aditya-shekhar-192bbb238/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
